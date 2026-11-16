@@ -1,0 +1,93 @@
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Złap siódemkę!"
+        android:textColor="#172554"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/counterText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:id="@+id/counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#2563EB"
+        android:textSize="110sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintBottom_toTopOf="@id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="35dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:text="START"
+        android:textSize="18sp"
+        android:backgroundTint="#16A34A"
+        app:layout_constraintTop_toBottomOf="@id/counterText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stopButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="12dp" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:text="STOP"
+        android:textSize="18sp"
+        android:backgroundTint="#DC2626"
+        app:layout_constraintTop_toTopOf="@id/startButton"
+        app:layout_constraintStart_toEndOf="@id/startButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#172554"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/hitsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trafienia: 0"
+        android:textColor="#475569"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/messageText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
